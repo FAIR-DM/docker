@@ -33,9 +33,8 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/fairdm/fairdm
+          images: ghcr.io/${{ github.repository_owner }}/fairdm
           tags: |
-            ${{ github.event.release.tag_name }}
             latest
           labels: |
             org.opencontainers.image.source=${{ github.repository }}
