@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
   && rm -rf /var/lib/apt/lists/*
 
 # copy entrypoint and command scripts
-COPY ./compose/geoluminate/bin/ /usr/local/bin/maintenance/
+COPY ./bin/ /usr/local/bin/maintenance/
 
 # fixes line endings and make scripts executable, move scripts to /usr/local/bin
 RUN sed -i 's/\r$//g' /usr/local/bin/maintenance/* && \
