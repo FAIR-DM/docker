@@ -1,7 +1,10 @@
 name: Publish to GHCR
 on:
-  release:
-    types: [released]
+  push:
+    branches:
+      - main
+  # release:
+    # types: [released]
 
 jobs:
   ghcr:
